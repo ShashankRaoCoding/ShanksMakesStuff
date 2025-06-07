@@ -6,11 +6,17 @@
       <description>Last 10 notes on ShanksMakesStuff</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Think Pythonically</title>
+    <link>https://www.shanksmakesstuff.xyz/Books/Non-Fiction/Think-Pythonically</link>
+    <guid>https://www.shanksmakesstuff.xyz/Books/Non-Fiction/Think-Pythonically</guid>
+    <description>Before starting this tutorial, it would help if you have python installed.</description>
+    <pubDate>Sat, 07 Jun 2025 15:04:05 GMT</pubDate>
+  </item><item>
     <title>ShanksMakesStuff.xyz</title>
     <link>https://www.shanksmakesstuff.xyz/ShanksMakesStuff.xyz</link>
     <guid>https://www.shanksmakesstuff.xyz/ShanksMakesStuff.xyz</guid>
     <description>Hey! I’m Shashank Rao, welcome to my digital garden! About me I’m a genetics student at King’s College London, passionate about biology, programming, and bits of social contract theory.</description>
-    <pubDate>Sat, 07 Jun 2025 14:26:53 GMT</pubDate>
+    <pubDate>Sat, 07 Jun 2025 14:59:14 GMT</pubDate>
   </item><item>
     <title>Into the Mind</title>
     <link>https://www.shanksmakesstuff.xyz/Books/Non-Fiction/Into-the-Mind</link>
@@ -23,12 +29,6 @@
     <guid>https://www.shanksmakesstuff.xyz/Books/Fiction/Omnisciae</guid>
     <description>Prologue The Keeper of All Stories As white as pristine paper yet to be inked. As bright as the full moon in a clear sky.</description>
     <pubDate>Sat, 07 Jun 2025 14:10:38 GMT</pubDate>
-  </item><item>
-    <title>Think Pythonically</title>
-    <link>https://www.shanksmakesstuff.xyz/Books/Non-Fiction/Think-Pythonically</link>
-    <guid>https://www.shanksmakesstuff.xyz/Books/Non-Fiction/Think-Pythonically</guid>
-    <description></description>
-    <pubDate>Thu, 05 Jun 2025 15:47:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
