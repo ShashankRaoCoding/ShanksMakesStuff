@@ -6,6 +6,12 @@
       <description>Last 10 notes on ShanksMakesStuff</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Think Pythonically</title>
+    <link>https://www.shanksmakesstuff.xyz/Projects/Books/Non-Fiction/Think-Pythonically</link>
+    <guid>https://www.shanksmakesstuff.xyz/Projects/Books/Non-Fiction/Think-Pythonically</guid>
+    <description>Preface Think Pythonically is a Python tutorial, but unlike other tutorials, here the focus is not on the syntax, but how to think about code in Python.</description>
+    <pubDate>Sat, 07 Jun 2025 15:47:58 GMT</pubDate>
+  </item><item>
     <title>ShanksMakesStuff.xyz</title>
     <link>https://www.shanksmakesstuff.xyz/ShanksMakesStuff.xyz</link>
     <guid>https://www.shanksmakesstuff.xyz/ShanksMakesStuff.xyz</guid>
@@ -17,12 +23,6 @@
     <guid>https://www.shanksmakesstuff.xyz/Projects/Code/Ideate2D</guid>
     <description>🎮 Ideate2D – Make Apps &amp; Games Without the Fuss Ideate2D is a WYSIWYG 2D game engine built on top of PyGame, designed to help you bring your ideas to life faster—whether you’re a complete beginner or an experienced dev who just wants to get things done.</description>
     <pubDate>Sat, 07 Jun 2025 15:31:32 GMT</pubDate>
-  </item><item>
-    <title>Think Pythonically</title>
-    <link>https://www.shanksmakesstuff.xyz/Projects/Books/Non-Fiction/Think-Pythonically</link>
-    <guid>https://www.shanksmakesstuff.xyz/Projects/Books/Non-Fiction/Think-Pythonically</guid>
-    <description>Before starting this tutorial, it would help if you have python installed.</description>
-    <pubDate>Sat, 07 Jun 2025 15:04:05 GMT</pubDate>
   </item><item>
     <title>Into the Mind</title>
     <link>https://www.shanksmakesstuff.xyz/Projects/Books/Non-Fiction/Into-the-Mind</link>
