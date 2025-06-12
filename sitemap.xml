@@ -1,4 +1,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5d8152e4472a6608505eb9c201b589f343270daa
     <loc>https://quartz.jzhao.xyz/Hey!</loc>
     <lastmod>2025-06-12T13:37:28.000Z</lastmod>
   </url><url>
@@ -7,4 +11,20 @@
   </url><url>
     <loc>https://quartz.jzhao.xyz/Omnisciae</loc>
     <lastmod>2025-06-07T14:10:40.000Z</lastmod>
+<<<<<<< HEAD
+=======
+=======
+    <loc>https://www.shanksmakesstuff.xyz/Hey!</loc>
+    <lastmod>2025-06-12T12:27:50.016Z</lastmod>
+  </url><url>
+    <loc>https://www.shanksmakesstuff.xyz/Projects/Books/Fiction/Omnisciae</loc>
+    <lastmod>2025-06-07T14:10:38.910Z</lastmod>
+  </url><url>
+    <loc>https://www.shanksmakesstuff.xyz/Projects/Books/Non-Fiction/Into-the-Mind</loc>
+    <lastmod>2025-06-07T14:17:10.765Z</lastmod>
+  </url><url>
+    <loc>https://www.shanksmakesstuff.xyz/Projects/Code/Ideate2D</loc>
+    <lastmod>2025-06-07T15:31:32.050Z</lastmod>
+>>>>>>> 857b6719aad14e43df9f3c6f1db6b49718cd2604
+>>>>>>> 5d8152e4472a6608505eb9c201b589f343270daa
   </url></urlset>
