@@ -2,31 +2,31 @@
 <rss version="2.0">
     <channel>
       <title>ShanksMakesStuff</title>
-      <link>https://shanksmakesstuff.xyz</link>
+      <link>https://https://www.shanksmakesstuff.xyz</link>
       <description>Last 10 notes on ShanksMakesStuff</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>Hey!</title>
-    <link>https://shanksmakesstuff.xyz/Hey!</link>
-    <guid>https://shanksmakesstuff.xyz/Hey!</guid>
+    <link>https://https://www.shanksmakesstuff.xyz/Hey!</link>
+    <guid>https://https://www.shanksmakesstuff.xyz/Hey!</guid>
     <description>I’m Shashank Rao elcome to my digital garden 🌱 ring my projects, and ideas! About Me I’m a Year 3 Undergraduate molecular genetics student at King’s College London, presently working as a Computational Biology Placement Student at GSK.</description>
     <pubDate>Sun, 30 Nov 2025 23:46:54 GMT</pubDate>
   </item><item>
     <title>Using Genomics to Explore if Hot Flushes Cause Insomnia</title>
-    <link>https://shanksmakesstuff.xyz/Blog/Using-Genomics-to-Explore-if-Hot-Flushes-Cause-Insomnia</link>
-    <guid>https://shanksmakesstuff.xyz/Blog/Using-Genomics-to-Explore-if-Hot-Flushes-Cause-Insomnia</guid>
+    <link>https://https://www.shanksmakesstuff.xyz/Blog/Using-Genomics-to-Explore-if-Hot-Flushes-Cause-Insomnia</link>
+    <guid>https://https://www.shanksmakesstuff.xyz/Blog/Using-Genomics-to-Explore-if-Hot-Flushes-Cause-Insomnia</guid>
     <description> .page-title { font-size: 1.70rem; text-wrap: nowrap; max-inline-size: 25vw; overflow: hidden; } .explorer-content { max-width: 50%; } .</description>
     <pubDate>Sun, 30 Nov 2025 17:02:12 GMT</pubDate>
   </item><item>
     <title>index</title>
-    <link>https://shanksmakesstuff.xyz/</link>
-    <guid>https://shanksmakesstuff.xyz/</guid>
+    <link>https://https://www.shanksmakesstuff.xyz/</link>
+    <guid>https://https://www.shanksmakesstuff.xyz/</guid>
     <description> window.location.href = `/Hey!.html` .</description>
     <pubDate>Sun, 30 Nov 2025 14:54:36 GMT</pubDate>
   </item><item>
     <title>Tsuki</title>
-    <link>https://shanksmakesstuff.xyz/Blog/Tsuki</link>
-    <guid>https://shanksmakesstuff.xyz/Blog/Tsuki</guid>
+    <link>https://https://www.shanksmakesstuff.xyz/Blog/Tsuki</link>
+    <guid>https://https://www.shanksmakesstuff.xyz/Blog/Tsuki</guid>
     <description> Download Release Release 0.0.5 (Beta Testing) · ShashankRaoCoding/tsuki Download the tsuki.zip file and extract to a folder, then run tsuki.exe.</description>
     <pubDate>Sat, 29 Nov 2025 23:01:44 GMT</pubDate>
   </item>
