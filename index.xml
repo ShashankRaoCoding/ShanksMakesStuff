@@ -9,8 +9,8 @@
     <title>AllPlot</title>
     <link>https://https://www.shanksmakesstuff.xyz/Tools/AllPlot</link>
     <guid>https://https://www.shanksmakesstuff.xyz/Tools/AllPlot</guid>
-    <description> GWASExplorer Choose CSV/TSV files to Visualise X-Axis: Y-Axis: ID: A chart will appear on the left once you select plottable parameters (anything numeric).</description>
-    <pubDate>Fri, 27 Feb 2026 08:04:58 GMT</pubDate>
+    <description> GWASExplorer body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #1a1a1a; color: white; } .columns { display: flex; gap: 20px; height: 100vh; } .viewport { flex: 1; background-color: #2a2a2a; padding: 20px; border-radius: 8px; overflow: auto; } .viewporthidden { flex:...</description>
+    <pubDate>Fri, 27 Feb 2026 08:07:59 GMT</pubDate>
   </item><item>
     <title>Welcome</title>
     <link>https://https://www.shanksmakesstuff.xyz/Welcome</link>
