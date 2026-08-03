@@ -221,43 +221,43 @@ pre:hover > .expand-button {
       a {
         color: #4CAF50;
       }
-    &lt;/style>
-  &lt;/head>
-  &lt;body>
-    &lt;div class=&quot;columns&quot;>
-      &lt;div class=&quot;viewporthidden&quot; id=&quot;viewport&quot;>
-        &lt;p id=&quot;file-content&quot;>&lt;/p>
-        &lt;canvas id=&quot;scatterplot&quot; width=&quot;400&quot; height=&quot;200&quot;>&lt;/canvas>&lt;br>
-      &lt;/div>
-      &lt;div class=&quot;contextmenufocussed&quot; id=&quot;contextmenu&quot;>
-        &lt;label class=&quot;file-button&quot;>
+    </style>
+  </head>
+  <body>
+    <div class="columns">
+      <div class="viewporthidden" id="viewport">
+        <p id="file-content"></p>
+        <canvas id="scatterplot" width="400" height="200"></canvas><br>
+      </div>
+      <div class="contextmenufocussed" id="contextmenu">
+        <label class="file-button">
           Choose CSV/TSV files to Visualise
-          &lt;input type=&quot;file&quot; id=&quot;file-input&quot; multiple=&quot;&quot; accept=&quot;.csv,.tsv&quot;>
-        &lt;/label>
-        &lt;div class=&quot;attributeSelectors&quot;>
-          &lt;div class=&quot;attributeSelector&quot;>
-            &lt;label for=&quot;x-attr&quot;>X-Axis:&lt;/label>
-            &lt;select id=&quot;x-attr&quot;>&lt;/select>
-          &lt;/div>
-          &lt;div class=&quot;attributeSelector&quot;>
-            &lt;label for=&quot;y-attr&quot;>Y-Axis:&lt;/label>
-            &lt;select id=&quot;y-attr&quot;>&lt;/select>
-          &lt;/div>
-          &lt;div class=&quot;attributeSelector&quot;>
-            &lt;label for=&quot;id-attr&quot;>ID:&lt;/label>
-            &lt;!-- New label for the ID selector -->
-            &lt;select id=&quot;id-attr&quot;>&lt;/select>
-          &lt;/div>
-        &lt;/div>
-        &lt;p style=&quot;color: white;&quot; id=&quot;message&quot;>A chart will appear on the left once you select plottable parameters (anything numeric). Set the ID to the rsid column name, and hover over the data points for more info. Click on a data point to query it with GNOMAD automatically.&lt;/p>
-        &lt;div id=&quot;box&quot; class=&quot;box&quot;>GNOMAD query results will appear here. Click on a data point on the chart to use.&lt;/div>
-        &lt;p> Looking to create a Manhattan Plot? Click &lt;a href=&quot;manhattan.html&quot;>here&lt;/a>.&lt;/p>
-      &lt;/div>
-      &lt;/div>
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom&quot;>&lt;/script>
-		    &lt;script>
-		    const selectorDivs = Array.from(document.getElementsByClassName(&quot;attributeSelectors&quot;));
+          <input type="file" id="file-input" multiple="" accept=".csv,.tsv">
+        </label>
+        <div class="attributeSelectors">
+          <div class="attributeSelector">
+            <label for="x-attr">X-Axis:</label>
+            <select id="x-attr"></select>
+          </div>
+          <div class="attributeSelector">
+            <label for="y-attr">Y-Axis:</label>
+            <select id="y-attr"></select>
+          </div>
+          <div class="attributeSelector">
+            <label for="id-attr">ID:</label>
+            <!-- New label for the ID selector -->
+            <select id="id-attr"></select>
+          </div>
+        </div>
+        <p style="color: white;" id="message">A chart will appear on the left once you select plottable parameters (anything numeric). Set the ID to the rsid column name, and hover over the data points for more info. Click on a data point to query it with GNOMAD automatically.</p>
+        <div id="box" class="box">GNOMAD query results will appear here. Click on a data point on the chart to use.</div>
+        <p> Looking to create a Manhattan Plot? Click <a href="manhattan.html">here</a>.</p>
+      </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+		    <script>
+		    const selectorDivs = Array.from(document.getElementsByClassName("attributeSelectors"));
 	const viewport = document.getElementById('viewport');
 	const contextmenu = document.getElementById('contextmenu');
 	const fileInput = document.getElementById('file-input');
@@ -294,7 +294,7 @@ pre:hover > .expand-button {
 	
 	    const readPromises = Array.from(files).map(file => {
 	        return new Promise((resolve, reject) => {
-            if (!file.name.endsWith('.tsv') &amp;&amp; !file.name.endsWith('.csv')) {
+            if (!file.name.endsWith('.tsv') && !file.name.endsWith('.csv')) {
                 showMessage(`Unsupported file type: ${file.name}. Please use CSV or TSV files.`, 'error');
                 return resolve(); // skip this file
             }
@@ -314,7 +314,7 @@ pre:hover > .expand-button {
 	                header.forEach(attr => allAttributes.add(attr));
 	
 	                // Parse SNPs
-	                for (let i = 1; i &lt; lines.length; i++) {
+	                for (let i = 1; i < lines.length; i++) {
                     const values = lines[i].split(delimiter);
 	                    const SNP = {};
 	                    header.forEach((attr, idx) => SNP[attr] = values[idx]);
@@ -334,9 +334,9 @@ pre:hover > .expand-button {
             return;
         }
 
-        [...selectorDivs].forEach(x => x.style.display = &quot;inline&quot;);
-	        viewport.className = &quot;viewport&quot;;
-	        contextmenu.className = &quot;contextmenuunfocussed&quot;;
+        [...selectorDivs].forEach(x => x.style.display = "inline");
+	        viewport.className = "viewport";
+	        contextmenu.className = "contextmenuunfocussed";
 	
 	        populateAttributeSelectors(allAttributes);
 	        addListeners(); 
@@ -391,7 +391,7 @@ pre:hover > .expand-button {
 	            const y = parseFloat(entry[yAttr]);
 	            const id = entry[idAttr] || '';
 	
-	            if (!isNaN(x) &amp;&amp; !isNaN(y)) {
+	            if (!isNaN(x) && !isNaN(y)) {
 	                dataset.data.push({ x, y, id });
 	                hasValidData = true;
 	            }
@@ -401,11 +401,11 @@ pre:hover > .expand-button {
 	    });
 	
 	    if (!hasValidData) {
-	        showMessage(&quot;Please select numeric attributes to plot.&quot;, 'error');
+	        showMessage("Please select numeric attributes to plot.", 'error');
 	        return;
 	    }
 	
-	    showMessage(&quot;Chart rendered successfully.&quot;, 'success');
+	    showMessage("Chart rendered successfully.", 'success');
 	
 	    const ctx = document.getElementById('scatterplot').getContext('2d');
 	    chart = new Chart(ctx, {
@@ -452,12 +452,12 @@ pre:hover > .expand-button {
 	    window.open(url, '_blank');
 	}
 	
-	const box = document.getElementById(&quot;box&quot;);
+	const box = document.getElementById("box");
 	
 	function query(rsid) {
 	  const query = `
 	    query VariantByRSID {
-	      variant(dataset: gnomad_r4, rsid: &quot;${rsid}&quot;) {
+	      variant(dataset: gnomad_r4, rsid: "${rsid}") {
 	        variant_id
 	        pos
 	        ref
@@ -470,10 +470,10 @@ pre:hover > .expand-button {
 	    }
 	  `;
 	
-	  fetch(&quot;https://gnomad.broadinstitute.org/api&quot;, {
-	    method: &quot;POST&quot;,
+	  fetch("https://gnomad.broadinstitute.org/api", {
+	    method: "POST",
 	    headers: {
-	      &quot;Content-Type&quot;: &quot;application/json&quot;,
+	      "Content-Type": "application/json",
 	    },
 	    body: JSON.stringify({ query }),
 	  })
@@ -482,37 +482,37 @@ pre:hover > .expand-button {
 	      const variant = data?.data?.variant;
 	
 	      if (!variant) { 
-	        box.innerHTML = `&lt;div>Variant not found for ID: &lt;b>${rsid}&lt;/b> Please choose an rsID.&lt;/div>`;
+	        box.innerHTML = `<div>Variant not found for ID: <b>${rsid}</b> Please choose an rsID.</div>`;
 	        return;
 	      }
 	
 	      const { variant_id, pos, ref, alt, exome } = variant;
 	
 	      let resultHTML = `
-	        &lt;div>&lt;strong>Variant ID:&lt;/strong> ${variant_id}&lt;/div>
-	        &lt;div>&lt;strong>Position:&lt;/strong> ${pos}&lt;/div>
-	        &lt;div>&lt;strong>Ref/Alt:&lt;/strong> ${ref} / ${alt}&lt;/div>
+	        <div><strong>Variant ID:</strong> ${variant_id}</div>
+	        <div><strong>Position:</strong> ${pos}</div>
+	        <div><strong>Ref/Alt:</strong> ${ref} / ${alt}</div>
 	      `;
 	
 	      if (exome) {
 	        const { ac, an } = exome;
-	        const af = an ? (ac / an).toFixed(5) : &quot;N/A&quot;;
+	        const af = an ? (ac / an).toFixed(5) : "N/A";
 	        resultHTML += `
-	          &lt;div>&lt;strong>AC:&lt;/strong> ${ac}&lt;/div>
-	          &lt;div>&lt;strong>AN:&lt;/strong> ${an}&lt;/div>
-	          &lt;div>&lt;strong>Allele Frequency:&lt;/strong> ${af}&lt;/div>
+	          <div><strong>AC:</strong> ${ac}</div>
+	          <div><strong>AN:</strong> ${an}</div>
+	          <div><strong>Allele Frequency:</strong> ${af}</div>
 	        `;
 	      } else {
 	        resultHTML += `
-	          &lt;div style=&quot;color: gray;&quot;>No exome data available for this variant.&lt;/div>
+	          <div style="color: gray;">No exome data available for this variant.</div>
 	        `;
 	      }
 	
 	      box.innerHTML = resultHTML;
 	    })
 	    .catch((error) => {
-	      console.error(&quot;Error fetching GNOMAD data:&quot;, error);
-	      box.innerHTML = `&lt;div>Error: ${error.message}&lt;/div>`;
+	      console.error("Error fetching GNOMAD data:", error);
+	      box.innerHTML = `<div>Error: ${error.message}</div>`;
 	    });
 	}
 	
@@ -521,7 +521,7 @@ pre:hover > .expand-button {
 	  const chromosome = chromAttrSelect.value; 
 	  const yAxis = yAxisSelector.value; 
 	  const fileNames = Object.keys(allData);
-	  const maxLengths = {};  // e.g., { &quot;1&quot;: 8, &quot;2&quot;: 7, &quot;X&quot;: 9 }
+	  const maxLengths = {};  // e.g., { "1": 8, "2": 7, "X": 9 }
 	
 	  // Step 1: Find max position string length per chromosome
 	  fileNames.forEach(filename => { 
@@ -537,23 +537,22 @@ pre:hover > .expand-button {
 	  // Step 2: Construct manhattanised string using max pad
 	  fileNames.forEach(filename => { 
 	    const snps = allData[filename];
-	    for (let i = 0; i &lt; snps.length; i++) { 
+	    for (let i = 0; i < snps.length; i++) { 
 	      const chrom = snps[i][chromosome];
-	      const paddedPos = snps[i][pos].toString().padStart(maxLengths[chrom], &quot;0&quot;);
-	      snps[i][&quot;manhattanised&quot;] = `${chrom}.${paddedPos}`;
-	      console.log(snps[i][&quot;manhattanised&quot;]);
-	      showMessage(snps[i][&quot;manhattanised&quot;]);
+	      const paddedPos = snps[i][pos].toString().padStart(maxLengths[chrom], "0");
+	      snps[i]["manhattanised"] = `${chrom}.${paddedPos}`;
+	      console.log(snps[i]["manhattanised"]);
+	      showMessage(snps[i]["manhattanised"]);
 	    }
 	  });
-	  allAttributes.add(&quot;manhattanised&quot;); 
+	  allAttributes.add("manhattanised"); 
 	  populateAttributeSelectors(allAttributes); 
 	
-	  xAttrSelect.value = &quot;manhattanised&quot;; 
+	  xAttrSelect.value = "manhattanised"; 
 	  yAttrSelect.value = yAxis; 
 	  renderChart(allData); 
-	}&lt;/script>
-  &lt;footer>This site is NOT the GWAS Explorer hosted by the NCI.&lt;/footer>
-</style>
+	}</script>
+  <footer>This site is NOT the GWAS Explorer hosted by the NCI.</footer>
 </article><hr/><div class="page-footer"></div></div><div class="right sidebar"></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/ShashankRaoCoding">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
 </script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
 </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>
